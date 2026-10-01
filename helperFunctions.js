@@ -15,3 +15,15 @@ export async function createFile(filePath) {
     
 }
 
+export async function deleteFile(filePath) {
+    console.log(`the file ${filePath} will be deleted`);
+}
+
+export async function renameFile(filePath, fileName) {
+    console.log(`the file at ${filePath} will be renamed to ${fileName}`);
+}
+
+export async function addContentToFile(filePath, content) {
+    console.log(`the content: ${content} will be added to the file with the path ${filePath}`);
+}
+
