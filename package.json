@@ -1,0 +1,16 @@
+{
+  "name": "file-system-training",
+  "version": "1.0.0",
+  "description": "Implementing my own file scanning script that reads commands from a seperate file",
+  "license": "ISC",
+  "author": "Abdelrahman mostafa",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
