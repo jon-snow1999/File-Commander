@@ -1,1 +1,1 @@
-rename a file names.txt to badnames.txt
+add to a file names.txt this content: ahmed ashraf

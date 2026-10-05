@@ -27,13 +27,19 @@ export async function deleteFile(filePath) {
 
 export async function renameFile(filePath, fileName) {
     try{
-        const renameConfirm = await fs.rename(filePath, fileName)
+        const renameConfirm = await fs.rename(filePath, fileName);
+        console.log(`File has been renamed to ${fileName}`);
     } catch (err){
         console.log("Seems like the file doesn't exist or it already been renamed");
     }
 }
 
 export async function addContentToFile(filePath, content) {
-    console.log(`the content: ${content} will be added to the file with the path ${filePath}`);
+    try{
+        const appendingConfirmation = await fs.appendFile(filePath, content + "\n", {encoding:"utf-8"});
+        console.log(`the content "${content}" has been added to the file: "${filePath}"`)
+    } catch (err){
+        console.log("Seems like the data has already been appended");
+    }
 }
 
