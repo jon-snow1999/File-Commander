@@ -1,1 +1,1 @@
-delete a file names.txt
+rename a file names.txt to badnames.txt

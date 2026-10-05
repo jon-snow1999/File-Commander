@@ -26,7 +26,11 @@ export async function deleteFile(filePath) {
 }
 
 export async function renameFile(filePath, fileName) {
-    console.log(`the file at ${filePath} will be renamed to ${fileName}`);
+    try{
+        const renameConfirm = await fs.rename(filePath, fileName)
+    } catch (err){
+        console.log("Seems like the file doesn't exist or it already been renamed");
+    }
 }
 
 export async function addContentToFile(filePath, content) {
