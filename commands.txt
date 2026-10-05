@@ -1,3 +1,1 @@
-rename a file names.txt to newnames.txt
 delete a file names.txt
-add to a file names.txt this content: hey there big idiot

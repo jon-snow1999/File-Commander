@@ -16,7 +16,13 @@ export async function createFile(filePath) {
 }
 
 export async function deleteFile(filePath) {
-    console.log(`the file ${filePath} will be deleted`);
+    try{
+        const deletetionConfirmation = await fs.unlink(filePath);
+        console.log(`The file ${filePath} has successfully been deleted`);
+    } catch (err){
+        console.log("it seems that maybe the file doesn't exist");
+    }
+    
 }
 
 export async function renameFile(filePath, fileName) {
